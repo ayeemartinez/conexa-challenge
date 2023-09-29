@@ -50,14 +50,14 @@ export default function Home() {
       <div className='w-full flex justify-center flex-wrap gap-4 xl:flex-nowrap'>
       <ListCard
           characters={charactersPage1}
-          number={1}
+          number={"First"}
           pageSize={pageSize}
           currentPage={currentPage1}
           onPageChange={handlePageChange1}
         />
         <ListCard
           characters={charactersPage2}
-          number={2}
+          number={"Second"}
           pageSize={pageSize}
           currentPage={currentPage2}
           onPageChange={handlePageChange2}
