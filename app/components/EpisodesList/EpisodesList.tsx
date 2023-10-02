@@ -10,9 +10,8 @@ export const EpisodesList:FC <EpisodesList> = ({type}) => {
             <div className="w-full text-left">
                 <h3 className="text-secondary-200 font-bold text-sm uppercase">{type} EPISODES</h3>
                 <div className="flex flex-wrap max-h-36 h-full overflow-y-scroll pt-3">
-                    <span className="text-neutrals-400">Episode 1 <br/> Episode 1 <br/> Episode 1 <br/> Episode 1 <br/>Episode 1 <br/> Episode 1 <br/> Episode 1 <br/> Episode 1 <br/> Episode 1 <br/></span>
+                    <span className="text-neutrals-400">S01E01 - Pilot - December 2, 2013</span>
                 </div>
-               
             </div>
         </div>
     )
