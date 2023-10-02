@@ -9,11 +9,11 @@ Es una web en la que podrás encontrar una lista de personajes de Rick And Morty
 - Next JS
 - Typescript 
 - Tailwind.
-- Adicionalmente utilicé axios y react paginate.
+- Adicionalmente utilicé axios y react paginate
 
 ## Demo
 
-Podrás encontrar la aplicación deployada [aquí] (https://conexa-challenge-ayelen-martinez.vercel.app/)
+💡 Podrás encontrar la aplicación deployada [aquí](https://conexa-challenge-ayelen-martinez.vercel.app/).
 
 ## Correr el proyecto en local
 
