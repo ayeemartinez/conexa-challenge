@@ -18,7 +18,7 @@ export const Card: FC<CardProps> = ({character}) => {
                 </div>
                 <div className="flex flex-wrap w-2/3 pl-4 md:pl-6 md:w-full">
                     <h3 className="w-full text-primary-300 font-semibold leading-4 pb-1 text-base md:!leading-[23px] xl:text-xl lg:group-hover:text-white">{character.name}</h3>
-                    <span className="w-full text-neutrals-400 text-xs md:text-sm md:pb-1  lg:group-hover:text-white">{character.status} - {character.species}</span>
+                    <span className="w-full text-neutrals-400 text-xs md:text-sm md:pb-1  lg:group-hover:text-white">{character.status === "Dead" ? '☠️' : character.status === "Alive" ? '😄' : character.status === "unknown" ? '❓' : ''} {character.status} - {character.species}</span>
                 </div>
             </div>
         </div>
