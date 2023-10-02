@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Conexa Challenge',
   description: 'Conexa Challenge by Ayelen Martinez',
+  
 }
 
 export default function RootLayout({
