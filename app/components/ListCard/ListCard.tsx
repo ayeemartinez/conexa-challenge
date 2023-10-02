@@ -25,7 +25,7 @@ export const ListCard:FC <ListCardProps> = ({id}) => {
     if (characters) {
       setTimeout(() => {
         setLoading(false);
-      }, 500);
+      }, 3000);
     }
   }, [characters]);
 
