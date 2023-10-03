@@ -25,7 +25,7 @@ export const Card: FC<CardProps> = ({character}) => {
                         <span className="w-full ml-2 text-neutrals-400 text-xs mr-1 lg:group-hover:text-white lg:text-base "> {character.status} </span>
                     </div>
                     <div className="flex flex-nowrap items-start w-full">
-                        <div className="text-center text-xs w-5 pt-1">
+                        <div className="text-center text-sm w-5 pt-[2px] ">
                             {character.species === "Human" ? '🧑🏼' : character.species === "unknown" ? '❓' : '👽'}
                         </div>
                         <span className=" w-full ml-2 text-neutrals-400 text-xs pt-0 lg:group-hover:text-white lg:text-base "> {character.species}</span>
