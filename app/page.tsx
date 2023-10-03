@@ -1,5 +1,5 @@
 'use client';
-import { ListCard, EpisodesList, Header } from './components'
+import { ListCard, EpisodesList } from './components'
 
 export default function Home() {
   
@@ -7,8 +7,6 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      
-      <Header/>
       <div className='p-5 lg:p-10 w-full'>
         <div className='w-full flex justify-center flex-wrap gap-4 xl:flex-nowrap'>
         <ListCard
