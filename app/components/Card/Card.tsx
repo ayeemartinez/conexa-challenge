@@ -20,15 +20,15 @@ export const Card: FC<CardProps> = ({character}) => {
                     <h3 className="w-full text-primary-300 font-semibold leading-4 pb-2 text-base md:!leading-[23px] xl:text-[19px] lg:group-hover:text-white">{character.name}</h3>
                     <div className="flex flex-nowrap items-center w-full">
                         <div className="text-center text-xs w-5">
-                            {character.status === "Dead" ? '🔴' : character.status === "Alive" ? '🟢' : character.status === "unknown" ? '⚫' : ''}
+                            {character.status === "Dead" ? '🔴' : character.status === "Alive" ? '🟢' :  '⚫'}
                         </div>
                         <span className="w-full ml-2 text-neutrals-400 text-xs mr-1 lg:group-hover:text-white lg:text-base "> {character.status} </span>
                     </div>
-                    <div className="flex flex-nowrap items-start w-full">
-                        <div className="text-center text-sm w-5 pt-[2px] ">
+                    <div className="flex flex-nowrap items-center lg:items-start w-full">
+                        <div className="text-center text-sm w-5 lg:pt-[2px] ">
                             {character.species === "Human" ? '🧑🏼' : character.species === "unknown" ? '❓' : '👽'}
                         </div>
-                        <span className=" w-full ml-2 text-neutrals-400 text-xs pt-0 lg:group-hover:text-white lg:text-base "> {character.species}</span>
+                        <span className=" w-full ml-2 text-neutrals-400 text-xs pt-[2px] lg:group-hover:text-white lg:text-base lg:pt-0"> {character.species}</span>
                     </div>
                     
                 </div>
