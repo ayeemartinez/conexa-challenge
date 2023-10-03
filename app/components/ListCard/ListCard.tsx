@@ -61,7 +61,7 @@ export const ListCard:FC <ListCardProps> = ({id}) => {
         </div>
       </div>
       <div className="w-full gap-5 lg:flex-nowrap">
-        <div className="grid grid-cols-1 gap-5 justify-center w-full md:grid-cols-2">
+        <div className="justify-center w-full grid gap-5 sm:grid-cols-2">
           {currentCharacters.map((character) => (
             <Card key={character.id} character={character} />
           ))}
