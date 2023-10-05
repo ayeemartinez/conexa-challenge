@@ -2,9 +2,7 @@
 import { ListCard, EpisodesList } from './components'
 
 export default function Home() {
-  
-
-
+ 
   return (
     <main className="flex min-h-screen flex-col items-center">
       <div className='p-5 lg:p-10 w-full'>
