@@ -1,7 +1,8 @@
 'use client';
 import { FC } from "react"
 import { useState, useEffect } from "react";
-import { EpisodesListSkeleton } from "../EpisodeListSkeleton";
+import { EpisodesListSkeleton } from "./EpisodeListSkeleton";
+import { Episode } from "@/app/types/types";
 
 interface EpisodesList {
     type:string,
@@ -19,6 +20,7 @@ export const EpisodesList:FC <EpisodesList> = ({type}) => {
     }
   }, );
 
+
     return (
         <>
         
@@ -31,7 +33,7 @@ export const EpisodesList:FC <EpisodesList> = ({type}) => {
                             <h3 className="text-secondary-200 font-normal text-sm uppercase">{type} EPISODES</h3>
                             <div className="flex flex-wrap max-h-36 h-full overflow-y-scroll pt-3">
                                 <span className="text-neutrals-400">S01E01 - Pilot - December 2, 2013</span>
-                            </div>
+                                </div>
                         </div>
                     </div>
                 )

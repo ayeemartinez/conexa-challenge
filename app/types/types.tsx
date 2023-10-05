@@ -4,7 +4,7 @@ export interface Character {
     status:string;
     species:string;
     image:string;
-    episode:string[],
+    episode:string[] | null,
   }
   
   export interface Episode {

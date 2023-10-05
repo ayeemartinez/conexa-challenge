@@ -4,8 +4,8 @@ import { Card } from "../Card"
 import { FC } from "react"
 import { useState, useEffect } from "react";
 import ReactPaginate from "react-paginate";
-import { fetchCharacters } from "@/app/api";
-import { ListCardSkeleton } from "../ListCardSkeleton";
+import { fetchCharactersByPage } from "@/app/api";
+import { ListCardSkeleton } from "./ListCardSkeleton";
 
 interface ListCardProps {
     id:number,
@@ -20,6 +20,8 @@ export const ListCard:FC <ListCardProps> = ({id}) => {
   const endIndex = startIndex + charactersPerPage;
   const currentCharacters = characters.slice(startIndex, endIndex);
   const [loading, setLoading] = useState(true);
+  const [selectedCard, setSelectedCard] = useState<number | null>(null); 
+
 
   useEffect(() => {
     if (characters) {
@@ -30,7 +32,7 @@ export const ListCard:FC <ListCardProps> = ({id}) => {
   }, [characters]);
 
   const fetchAndSetCharacters = async () => {
-    fetchCharacters(id).then((data) => {
+    fetchCharactersByPage(id).then((data) => {
       setCharacters(data);
     });
   };
@@ -43,6 +45,15 @@ export const ListCard:FC <ListCardProps> = ({id}) => {
     setCurrentPage(selected + 1);
   };
 
+  const handleCardClick = (characterId: number) => {
+    if (selectedCard === characterId) {
+      setSelectedCard(null);
+    } else {
+      setSelectedCard(characterId);
+    }
+  };
+
+  
   return (
 
     <>
@@ -63,7 +74,10 @@ export const ListCard:FC <ListCardProps> = ({id}) => {
       <div className="w-full gap-5 lg:flex-nowrap">
         <div className="justify-center w-full grid gap-5 sm:grid-cols-2">
           {currentCharacters.map((character) => (
-            <Card key={character.id} character={character} />
+            <Card key={character.id} 
+                  character={character} 
+                  isSelected={selectedCard === character.id} 
+                  onClick={() => handleCardClick(character.id)} />
           ))}
         </div>
         <div className="w-full mt-4 flex flex-nowrap justify-end">

@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { Episode, Character } from './types/types';
 
-export const fetchCharacters = async (page: number): Promise<Character[]> => {
+export const fetchCharactersByPage = async (page: number): Promise<Character[]> => {
   try {
     const response = await axios.get(
       `https://rickandmortyapi.com/api/character?page=${page}`
